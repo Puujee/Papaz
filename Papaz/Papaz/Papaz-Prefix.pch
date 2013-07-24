@@ -1,0 +1,20 @@
+//
+// Prefix header for all source files of the 'Papaz' target in the 'Papaz' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <FacebookSDK/FacebookSDK.h>
+    #import "AFNetworking.h"
+    #import "AbstractTableViewController.h"
+    #import "AppDelegate.h"
+#endif
+#define xLog(fmt, ...) NSLog(@"%s " fmt, __PRETTY_FUNCTION__, ##__VA_ARGS__)
+#define APPDEL ((AppDelegate *)[[UIApplication sharedApplication] delegate])
